@@ -10,12 +10,112 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <!-- font awesome cdn-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<!-- style css -->
 <link rel="stylesheet" href="style.css"/>
 
     <title>Blog Project</title>
 </head>
 <body>
-    <h1>This is my Blog Project</h1>
+    <!-- header starts here -->
+    <header id="blog-header">
+        <figure class="logo-figure">
+            <i class="fa-brands fa-autoprefixer logo"></i>
+        </figure>
+
+        <nav id="menu-icon">
+            <ul>
+                <li><a href="#"class="nav__link">Home</a></li>
+                <li><a href="#blog-banner-section"class="nav__link">About</a></li>
+                <li><a href="#"class="nav__link">Archives</a></li>
+                <li><a href="#"class="nav__link">Blog</a></li>
+                <li><a href="#"class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends here -->
+
+    <main>
+    
+    <!-- blog banner starts here -->
+        <section id="blog-banner-section" class="banner">
+            <article >
+                <h1 class="banner__heading">
+                    Web Development
+                </h1>
+                <p class="banner__description text-justify">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus a veniam et tempora totam esse! Assumenda adipisci rerum, deleniti sint saepe, possimus suscipit, itaque autem animi neque perspiciatis ipsa non?
+                </p>
+            </article>
+            <aside>
+                <img src="./images/cover-photo.jpg" 
+                alt="cover photo"
+                class="banner__img">                
+            </aside>
+        </section>
+    <!-- blog banner ends here -->
+
+    <!-- about me section starts here -->
+        <section id="blog-about-section" class="section-center">
+            <h2 class="section-heading">About Me</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3 class="card__header">Education</h3>
+                    <p class="card__description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Necessitatibus quo fuga vel culpa eligendi, est fugiat 
+                         commodi iusto iste nobis voluptates, unde voluptatem
+                          ratione neque suscipit vero asperiores accusantium alias.
+                          
+                    </p>
+                    <button class="btn card__btn">Read More</button>
+                </div>
+
+                <!-- card 2 -->
+                <div class="card">
+                    <h3 class="card__header">Education</h3>
+                    <p class="card__description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Necessitatibus quo fuga vel culpa eligendi, est fugiat 
+                         commodi iusto iste nobis voluptates, unde voluptatem
+                          ratione neque suscipit vero asperiores accusantium alias.
+                          
+                    </p>
+                    <button class="btn card__btn">Read More</button>
+                </div>
+                <!-- card 3 -->
+                <div class="card">
+                    <h3 class="card__header">Education</h3>
+                    <p class="card__description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Necessitatibus quo fuga vel culpa eligendi, est fugiat 
+                         commodi iusto iste nobis voluptates, unde voluptatem
+                          ratione neque suscipit vero asperiores accusantium alias.
+                          
+                    </p>
+                    <button class="btn card__btn">Read More</button>
+                </div>
+            </div>
+
+        </section>
+
+    <!-- about me section ends here -->
+
+    <!-- archives starts here -->
+
+    <!-- archives ends here -->
+
+    <!-- blog starts here -->
+
+    <!-- blog ends here -->
+
+    <!-- contact starts here -->
+
+    <!-- contact ends here -->
+    </main>
+
+    <footer>
+        I am footer 
+    </footer>
+
 </body>
 </html>

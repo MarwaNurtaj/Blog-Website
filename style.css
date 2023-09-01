@@ -1,4 +1,8 @@
 /* recent code and common code starts here */
+:root{
+    --box-shadow: ;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -23,9 +27,189 @@ body{
     max-width: 100%;
     margin: auto;
     /* offset-x | offset-y | blur-radius | color */
-    box-shadow: 0.2rem 0.2rem 0.2rem black,
-                -0.2rem 0rem 0.2rem black;
+    box-shadow: 0.1rem 0.1rem 0.2rem black,
+                -0.1rem 0rem 0.2rem black;
 
+}
+.text-justify{
+    text-align: justify;
+}
+.text-white{
+    color: #fafafa;
 }
 
 /* recent code and common code ends here */
+
+/* header starts here */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: black;
+    color: #fafafa;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 5vh;
+}
+.logo-figure{
+    border: 1px solid #fff;
+}
+.logo{
+    font-size: 4rem;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+nav ul li{
+    padding: 1rem;
+    transition: all 0.4s;
+}
+nav ul li:hover{
+    background-color: rgb(168, 111, 6);
+    border-radius: 0.5rem;
+}
+
+.nav__link{
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+/* header ends here */
+
+/* banner section starts here */
+.banner{
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.banner article{
+    flex-basis: 50%;
+    margin: 1rem;
+}
+.banner aside{
+    flex-basis: 50%;    
+    margin: 1rem;
+}
+
+.banner__img{
+    width: 55rem;
+    height: 55rem;
+    border: 0.3rem solid;
+}
+.banner__heading{
+    display: inline-block;
+    background-color: black;
+    color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+}
+.banner__description{
+    font-size: 1.8rem;
+
+}
+/* banner section ends here */
+
+/* about me section starts here */
+#blog-about-section{
+    background-color: #4c4c4c;
+}
+.cards{
+    display: flex;
+}
+#blog-header{
+
+}
+
+
+/* about me section ends here */
+
+/* about starts here */
+
+/* about ends here */
+
+/* blog starts here */
+
+/* blog ends here */
+
+/* contact starts here */
+
+/* contact ends here */
+
+/* responsiveness starts here */
+@media screen and (max-width: 992px){
+     /* banner part start */
+    .banner{
+        flex-direction: column;
+    }
+    .banner article{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+     /* banner part end */
+     /* banner part start */
+
+}
+@media screen and (max-width: 768px){
+    html{
+        font-size: 55.5%;
+    }
+    /* banner part start */
+    .banner article{
+        width: 80%;
+    }
+    /* banner part ends */
+
+    /* about me section starts here */
+     
+    /* about me section ends here */
+
+}
+@media screen and (max-width:600px){
+    /* header part starts */
+    html{
+        font-size: 48.5%;
+    }
+    header{
+        flex-direction: column;
+      
+    }
+    nav ul{
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+    /* header part ends */
+
+     /* banner part start */
+    .banner{
+        min-height: auto;
+    }
+    .banner article{
+        width: 90%;
+    }
+    .banner__img{
+        max-width: 100%;
+    }
+     /* banner part end */
+
+     /* about me section starts here */
+
+     /* about me section ends here */
+}
+
+/* responsiveness ends here */
+
+
+
