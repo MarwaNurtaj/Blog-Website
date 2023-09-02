@@ -1,9 +1,10 @@
 /* recent code and common code starts here */
-:root{
-    --box-shadow: ;
+:root {
+    --transition: all 0.3s;
+    --scale: scale(1.1);
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,9 +12,10 @@
     text-decoration: none;
     outline: none;
     font-weight: 400;
-    
+
 }
-html{
+
+html {
     background-color: #fafafa;
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -21,27 +23,59 @@ html{
     font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     background-color: #fff;
     width: 100rem;
     max-width: 100%;
     margin: auto;
     /* offset-x | offset-y | blur-radius | color */
     box-shadow: 0.1rem 0.1rem 0.2rem black,
-                -0.1rem 0rem 0.2rem black;
+        -0.1rem 0rem 0.2rem black;
 
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
-.text-white{
+
+.text-white {
     color: #fafafa;
+}
+
+
+.btn {
+    background-color: #e2a703;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+}
+
+.section-heading {
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'poppins';
+    font-style: italic;
+
+}
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* recent code and common code ends here */
 
 /* header starts here */
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,36 +88,41 @@ header{
     z-index: 10;
     min-height: 5vh;
 }
-.logo-figure{
+
+.logo-figure {
     border: 1px solid #fff;
 }
-.logo{
+
+.logo {
     font-size: 4rem;
 }
-nav ul{
+
+nav ul {
     display: flex;
     gap: 2rem;
 }
-nav ul li{
+
+nav ul li {
     padding: 1rem;
-    transition: all 0.4s;
+    transition: var(--transition);
 }
-nav ul li:hover{
+
+nav ul li:hover {
     background-color: rgb(168, 111, 6);
     border-radius: 0.5rem;
 }
 
-.nav__link{
+.nav__link {
     font-size: 1.8rem;
     color: #fff;
     cursor: pointer;
-    
+
 }
 
 /* header ends here */
 
 /* banner section starts here */
-.banner{
+.banner {
     padding: 5rem 1rem;
     display: flex;
     justify-content: center;
@@ -91,21 +130,23 @@ nav ul li:hover{
     min-height: 70vh;
 }
 
-.banner article{
+.banner article {
     flex-basis: 50%;
     margin: 1rem;
 }
-.banner aside{
-    flex-basis: 50%;    
+
+.banner aside {
+    flex-basis: 50%;
     margin: 1rem;
 }
 
-.banner__img{
+.banner__img {
     width: 55rem;
     height: 55rem;
     border: 0.3rem solid;
 }
-.banner__heading{
+
+.banner__heading {
     display: inline-block;
     background-color: black;
     color: #fafafa;
@@ -113,29 +154,90 @@ nav ul li:hover{
     margin-bottom: 1.5rem;
     font-size: 4rem;
 }
-.banner__description{
+
+.banner__description {
     font-size: 1.8rem;
 
 }
+
 /* banner section ends here */
 
 /* about me section starts here */
-#blog-about-section{
+#blog-about-section {
     background-color: #4c4c4c;
 }
-.cards{
+
+.cards {
     display: flex;
+    align-items: center;
+    gap: 1rem;
 }
-#blog-header{
 
+.card {
+    flex: 1;
+    border-radius: 0.6rem;
+    background-color: rgb(162, 162, 160);
+    padding: 3rem 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    transition: all 0.3s;
 }
 
+.card:hover {
+    transform: var(--scale);
+}
+
+.card__header {
+    font-size: 3rem;
+}
+
+.card__description {
+    padding: 0.4rem 0;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card__btn {
+    width: 80%;
+}
 
 /* about me section ends here */
 
-/* about starts here */
+/* archives section starts here */
+.archives__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    transition: var(--transition);
+}
 
-/* about ends here */
+.archives__img:hover {
+    transform: var(--scale);
+}
+
+.archives-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+}
+
+.archives__lists {
+    display: flex;
+    text-align: center;
+    gap: 2rem;
+
+}
+
+
+
+/* archives section ends here */
 
 /* blog starts here */
 
@@ -146,70 +248,112 @@ nav ul li:hover{
 /* contact ends here */
 
 /* responsiveness starts here */
-@media screen and (max-width: 992px){
-     /* banner part start */
-    .banner{
+@media screen and (max-width: 992px) {
+
+    /* banner part start */
+    .banner {
         flex-direction: column;
     }
-    .banner article{
+
+    .banner article {
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 5rem;
     }
-     /* banner part end */
-     /* banner part start */
+
+    /* banner part end */
+    /* archives section starts here */
+
+    /* archives section ends here */
 
 }
-@media screen and (max-width: 768px){
-    html{
+
+@media screen and (max-width: 768px) {
+    html {
         font-size: 55.5%;
     }
+
     /* banner part start */
-    .banner article{
+    .banner article {
         width: 80%;
     }
+
     /* banner part ends */
 
     /* about me section starts here */
-     
+    .cards {
+        flex-direction: column;
+        width: 80%;
+    }
+
     /* about me section ends here */
 
+    /* archives section starts here */
+    #archives{
+        min-height: auto;
+    }
+
+    /* archives section ends here */
+
 }
-@media screen and (max-width:600px){
+
+@media screen and (max-width:600px) {
+
     /* header part starts */
-    html{
+    html {
         font-size: 48.5%;
     }
-    header{
+
+    header {
         flex-direction: column;
-      
+
     }
-    nav ul{
+
+    nav ul {
         flex-direction: column;
         padding-left: 2.5rem;
     }
+
     /* header part ends */
 
-     /* banner part start */
-    .banner{
+    /* banner part start */
+    .banner {
         min-height: auto;
     }
-    .banner article{
+
+    .banner article {
         width: 90%;
     }
-    .banner__img{
+
+    .banner__img {
         max-width: 100%;
     }
-     /* banner part end */
 
-     /* about me section starts here */
+    /* banner part end */
 
-     /* about me section ends here */
+    /* about me section starts here */
+    #blog-about-section {
+        min-height: auto;
+    }
+
+    .cards {
+        width: 90%;
+    }
+
+    /* about me section ends here */
+
+    /* archives section starts here */
+    .archives__lists{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 90%;
+        gap: 3rem;
+
+
+    }
+    /* archives section ends here */
 }
 
 /* responsiveness ends here */
-
-
-
